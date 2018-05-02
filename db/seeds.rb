@@ -1,7 +1,16 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+Beer.create(name: "Bubweiser", cost: 0.5, color: "Yellow", origin: "USA")
+Beer.create(name: "Blue Point", cost: 0.6, color: "Orange", origin: "USA")
+Beer.create(name: "Becks", cost: 0.5, color: "Amber", origin: "Germany")
+Beer.create(name: "Rouge", cost: 0.7, color: "Brown", origin: "USA")
+Beer.create(name: "Modelo", cost: 0.4, color: "Yellow", origin: "Mexico")
+Beer.create(name: "Leffe", cost: 0.6, color: "Orange", origin: "Belgium")
+
+Patron.create(name: "Billy Dale")
+Patron.create(name: "John Smith")
+Patron.create(name: "Chris Kringle")
+Patron.create(name: "Johnny Stocks")
+
+Type.create(name: "Pilsner", body: "Light")
+Type.create(name: "IPA", body: "Medium")
+Type.create(name: "Stout", body: "Full")
+Type.create(name: "Ale", body: "Medium")
