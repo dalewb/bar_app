@@ -1,0 +1,9 @@
+<h1>Edit Patron</h1><br />
+
+<%= form_for @patron do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %><br>
+    <%= f.label :favorite_type %>
+    <%= f.collection_select :favorite_type, @types, :id, :name %><br>
+    <%= f.submit %>
+<% end %>

@@ -11,6 +11,7 @@ class BeersController < ApplicationController
 
   def create
     @beer = Beer.create(beer_params)
+    byebug
     redirect_to @beer
   end
 

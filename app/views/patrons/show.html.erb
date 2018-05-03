@@ -1,0 +1,4 @@
+<h2><%= @patron.name %></h2><br />
+<h3>Favorite Type of Beer: <%= @patron.favorite_type.name %></h3>
+<%= button_to "All Patrons", patrons_path, method: :get %>
+<%= button_to "Edit Patron", edit_patron_path, method: :get %>
