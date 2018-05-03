@@ -1,5 +1,7 @@
 class BeersController < ApplicationController
   before_action :get_beer, only: [:show]
+  validates :name, presence: true
+  validates :cost, numericality: { greater_than: 0 }
 
   def index
     @beers = Beer.all
