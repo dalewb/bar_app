@@ -1,0 +1,4 @@
+<h3>Type: <%= @type.name %></h3>
+<h3>Body: <%= @type.body %></h3>
+<%= button_to "All Types", types_path, method: :get %>
+<%= button_to "Edit Type", edit_type_path, method: :get %>

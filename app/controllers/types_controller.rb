@@ -22,6 +22,7 @@ class TypesController < ApplicationController
   end
 
   def update
+    byebug
     @type = Type.find(params[:id])
     @type.update(type_params)
     redirect_to @type
@@ -31,7 +32,7 @@ class TypesController < ApplicationController
   private
 
   def type_params
-    params.require(:type).permit(:name, :body)
+    params.require(:type).permit(:name, :type_list)
   end
 
 end

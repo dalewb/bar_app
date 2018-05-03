@@ -7,3 +7,5 @@
     <%= f.collection_select :type_list, @type.type_list, :itself, :itself %><br>
     <%= f.submit %>
 <% end %>
+
+<%= button_to "All Types", types_path, method: :get %>
