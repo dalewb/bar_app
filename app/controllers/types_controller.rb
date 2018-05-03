@@ -1,6 +1,6 @@
 class TypesController < ApplicationController
   before_action :get_type, only: [:show, :edit, :update]
-  validates :name, presence: true
+  # validates :name, presence: true
 
   def index
     @types = Type.all
@@ -11,9 +11,13 @@ class TypesController < ApplicationController
 
   def new
     @type = Type.new
+    @bodies = @type.body_list
   end
 
   def create
+    byebug
+    x = type_params
+
     @type = Type.create(type_params)
     redirect_to @type
   end
@@ -30,7 +34,7 @@ class TypesController < ApplicationController
   private
 
   def type_params
-    params.require(:type).permit(:name, :type_list)
+    params.require(:type).permit(:name, :body)
   end
 
   def get_type

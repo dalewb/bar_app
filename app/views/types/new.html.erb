@@ -4,5 +4,6 @@
   <%= f.label :name %>
   <%= f.text_field :name %>
   <%= f.label :body %>
-  <%= f.collection_select :type_list, @type.type_list, :itself, :itself %><br>
+  <%= f.collection_select :body_list, @bodies, :itself, :itself %><br>
+  <%= f.submit %>
 <% end %>

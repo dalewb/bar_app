@@ -1,6 +1,6 @@
 class PatronsController < ApplicationController
   before_action :get_patron, only: [:show, :edit, :update]
-  validates :name, presence: true
+  # validates :name, presence: true
 
   def index
     @patrons = Patron.all
