@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2018_05_02_231919) do
 
   create_table "beers", force: :cascade do |t|
     t.string "name"
-    t.decimal "cost"
+    t.integer "cost"
     t.string "color"
     t.string "origin"
     t.integer "flight_id"
