@@ -1,0 +1,9 @@
+<h1>Edit Type</h1><br />
+
+<%= form_for @type do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %><br>
+    <%= f.label :body %>
+    <%= f.collection_select :type_list, @type.type_list, :itself, :itself %><br>
+    <%= f.submit %>
+<% end %>
